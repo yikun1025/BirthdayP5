@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>amber生日预告</title>
+	<link rel="icon" href="online/shuli_logo.png" sizes="16x16">
+	<script src="js/script.js"></script>
+	<link rel="stylesheet" href="p5-ui/dist/style.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<style>
+		html,
+		body {
+			margin: 0;
+			font-family: 'HYWH-85W', sans-serif;
+			background-color: black;
+			text-align: center;
+			background-image: url(img/reddot.png);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			overflow-x: hidden;
+		}
+
+		header {
+			padding: 1px;
+			text-align: left;
+			color: #ecf0f1;
+			background-image: url(img/bg_header.png);
+			background-size: auto;
+			background-position: left bottom;
+			background-repeat: repeat-x;
+			display: flex;
+		}
+
+		#totop {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 64px;
+			height: 64px;
+			transition: all 0.1s ease-in-out;
+			background: url(img/totop.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			z-index: 3;
+		}
+
+		.buttons {
+			text-align: center;
+			padding: 8px;
+			width: 128px;
+			text-decoration: none;
+			color: black;
+			background: url(img/buttonbg.png);
+			background-repeat: no-repeat;
+			transition: all 0.2s ease-in-out;
+		}
+
+		.buttons:hover {
+			transform: scale(1.1);
+			transition: all 0.2s ease-in-out;
+			opacity: 0.5;
+		}
+
+		#poster {
+			margin: auto;
+			background-repeat: no-repeat;
+			background-position: center top;
+			position: flex;
+			height: 500px;
+		}
+
+		.spec {
+			width: 800px;
+			height: auto;
+			margin: auto;
+			margin-top: 128px;
+			background: url(img/bg_spec.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			display: flex;
+			justify-content: space-between;
+			padding: 64px;
+		}
+
+		.characterimgs {
+			display: flex;
+			background-color: aqua;
+			position: relative;
+			width: 800px;
+			height: 512px;
+			background: url(img/bg_slider_text1.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin: auto;
+		}
+
+
+		.buynow:hover {
+			transition: opacity 0.1s ease-in-out;
+			opacity: 0.8;
+		}
+
+		.wrapper {
+			position: relative;
+			background-image: url(img/red.png);
+			color: white;
+			margin: auto;
+			width: 76%;
+			margin-bottom: 30px;
+			margin-left: 230px;
+			margin-top: 30px;
+			top: 0;
+			left: 0;
+			min-width: 1227px;
+			height: auto;
+			height: 728px;
+		}
+
+		.intro-text first-of-type{
+			position: relative;
+			top: -160px;
+			margin-left: 0px;
+			left: -0px;
+		}
+
+		p {
+			color: #fff;
+			font-size: 18px;
+			line-height: 1.9;
+			margin-bottom: 30px;
+		}
+
+
+
+		#x {
+			height: 64px;
+			position: absolute;
+			right: 12%;
+			top: 10%;
+		}
+
+		#openbtn {
+			position: absolute;
+			z-index: 999;
+			bottom: 8px;
+			right: 8px;
+			width: 251px;
+			height: 141px;
+			opacity: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<a id="totop" class="out1"></a>
+	<header>
+		<h1 class="titletext">Happy Birthday</h1>
+		<div class="fixed_top">
+			<div class="fixed_top_cont">
+				<a href="index.html"><img src="online/shuli_logo.png" class="logo"></a>
+				<a href="buy.html" class="top_nav n1"><span></span></a>
+				<a href="gallery.html" class="top_nav n2"><span></span></a>
+				<a href="buy.html" class="top_nav n3"><span></span></a>
+				<a href="buy.html" class="top_nav n4"><span></span></a>
+				<a href="buy.html" class="top_nav n5"><span></span></a>
+				<div class="top_menu">
+					<div class="menu_switch menu_login">
+						<div class="menu_open">
+							<div class="menu_cont menu_login_cont">
+								<div class="login_before">
+									<a class="sign_in">应援</a>
+								</div>
+								<div class="login_after" style="display: none;">
+									<p>用户：<span class="userName"></span></p>
+									<a class="sign_out">登出</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="menu_music"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<div id="open">
+			<h1 class="slogan"><img src="online/slogan.png"></h1>
+			<div class="pv">
+				<video autoplay muted onclick="Popup()">
+					<source src="assets/首图.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<button id="openbtn" onclick="Popup()"></button>
+			</div>
+		</div>
+		<div class="wrapper" inline>
+			<h2><img src="img/intro_title.png" class="intro-text" alt="2022年10月21日，拿走你的心。"></h2>
+			<div class="intro-text">
+				<p></p>
+				<p>本来要写倒计时，我累了不想写了</p>
+				<p>不会画画不会设计好麻烦哦</p>
+				<p>因为还要写游戏，我就之后再慢慢加设计好了，作为懒狗我觉得我做了很多了</p>
+				<p>I like you, Amber</p>
+			</div>
+		</div>
+		<div class="spec">
+			<div class="speccontent">
+				<img class="specimg" src="img/spec.png" alt="" />
+				<div class="spectext">
+					<h2 class="buttons">人物</h2>
+					<h3> Amber</h3>
+				</div>
+				<strong>
+					<div class="spectext">
+						<h2 class="buttons">爱好</h2>
+						<h3>平稳的，悠然的躺着过每一天
+							<br>
+							写小说
+							<br>
+							画画
+							<br>
+							烤火
+							(必须*)
+							<br>
+						</h3>
+
+					</div>
+				</strong>
+				<div class="spectext">
+					<h2 class="buttons">人生理想</h2>
+					<h3>当快乐的流浪汉</h3>
+				</div>
+				<div class="spectext">
+					<h2 class="buttons">编不出来</h2>
+					<h3>累了</h3>
+				</div>
+			</div>
+			<img class="cover" src="online/cover.png" alt="cover" />
+		</div>
+	</div>
+
+	<div class="end">
+		<img src="img/fonts/celebration.png" class="footer" />
+		<img src="img/fonts/created by shuli.png" class="footer" />
+	</div>
+</body>
+
+</html>

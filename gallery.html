@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Persona 5 Royal画廊</title>
+		<link rel="icon" href="online/shuli_logo.png" sizes="16x16">
+		<link rel="stylesheet" href="css/styles.css" />
+		<style>
+			html,
+			body {
+				margin: 0;
+				font-family: Arial, sans-serif;
+				background-color: black;
+				text-align: center;
+				background-image: url(img/reddot.png);
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				overflow-x: hidden;
+			}
+
+			header {
+				padding: 1px;
+				text-align: left;
+				color: #ecf0f1;
+				background-image: url(img/bg_header.png);
+				background-size: auto;
+				background-position: left bottom;
+				background-repeat: repeat-x;
+				display: flex;
+			}
+
+			.buttons {
+				text-align: center;
+				padding: 8px;
+				width: 128px;
+				text-decoration: none;
+				color: black;
+				background: url(img/buttonbg.png);
+				background-repeat: no-repeat;
+				transition: all 0.2s ease-in-out;
+			}
+
+			.buttons:hover {
+				transform: scale(1.1);
+				transition: all 0.2s ease-in-out;
+				opacity: 0.5;
+			}
+
+			.imgrow {
+				display: flex;
+				margin: 4%;
+			}
+
+			.imgrow img {
+				margin-left: 2%;
+				margin-right: 2%;
+				margin-top: 0;
+				width: 30%;
+				transition: all 0.2s ease-in-out;
+				box-shadow: 5px 5px 10px black;
+			}
+
+			.imgrow img:hover {
+				transform: scale(1.2);
+				transition: all 0.2s ease-in-out;
+			}
+
+			.imgtitle {
+				background: url(img/news_bg.png);
+				/* background-color: aqua; */
+				margin-top: 4%;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				height: 64px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+			}
+
+			.imgtitle p {
+				color: white;
+				size: 32px;
+				transform: translate(0, 2px);
+			}
+		</style>
+	</head>
+	<body>
+		<a id="totop" class="out1"></a>
+		<header>
+			<h1 class="titletext">Happy Birthday</h1>
+			<div class="fixed_top">
+				<div class="fixed_top_cont">
+					<a href="index.html"><img src="online/shuli_logo.png" class="logo"></a>
+					<a href="buy.html" class="top_nav n1"><span></span></a>
+					<a href="gallery.html" class="top_nav n2"><span></span></a>
+					<a href="buy.html" class="top_nav n3"><span></span></a>
+					<a href="buy.html" class="top_nav n4"><span></span></a>
+					<a href="buy.html" class="top_nav n5"><span></span></a>
+					<div class="top_menu">
+						<div class="menu_switch menu_login">
+							<div class="menu_open">
+								<div class="menu_cont menu_login_cont">
+									<div class="login_before">
+										<a class="sign_in">应援</a>
+									</div>
+									<div class="login_after" style="display: none;">
+										<p>用户：<span class="userName"></span></p>
+										<a class="sign_out">登出</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a class="menu_music"></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="main">
+			<div>
+				<div class="imgtitle">
+					<img src="img/fonts/Drawings.png" alt="" />
+				</div>
+				<div class="imgrow">
+					<img src="img/Gallery/1.jpg" alt="" />
+					<img src="img/Gallery/2.jpg" alt="" />
+					<img src="img/Gallery/3.jpg" alt="" />
+				</div>
+				<div class="imgrow">
+					<img src="img/Gallery/4.jpg" alt="" />
+					<img src="img/Gallery/5.jpg" alt="" />
+					<img src="img/Gallery/6.jpg" alt="" />
+				</div>
+				<div class="imgrow">
+					<img src="img/Gallery/7.jpg" alt="" />
+					<img src="img/Gallery/8.jpg" alt="" />
+					<img src="img/Gallery/9.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="end">
+			<img src="img/fonts/celebration.png" class="footer" />
+			<img src="img/fonts/created by shuli.png" class="footer" />
+		</div>
+	</body>
+</html>
